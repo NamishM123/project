@@ -6,7 +6,7 @@ function TableHeader() {
       <tr>
         <th>Name</th>
         <th>Job</th>
-        <th>Id</th>
+        <th>ID</th>
         <th>Remove</th>
       </tr>
     </thead>
@@ -16,12 +16,12 @@ function TableHeader() {
 function TableBody(props) {
   const rows = props.characterData.map((row, index) => {
     return (
-      <tr key={row.id || index}>
+      <tr key={row._id || index}>
         <td>{row.name}</td>
         <td>{row.job}</td>
-        <td>{row.id}</td>
+        <td>{row._id}</td>
         <td>
-          <button onClick={() => props.removeCharacter(row.id)}>
+          <button onClick={() => props.removeCharacter(row._id)}>
             Delete
           </button>
         </td>
